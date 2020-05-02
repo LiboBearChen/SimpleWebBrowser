@@ -16,5 +16,20 @@ namespace SimpleWebBrowser
         {
             InitializeComponent();
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thsi program was made by Libo Chen");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate(textBox1.Text);
+        }
     }
 }
