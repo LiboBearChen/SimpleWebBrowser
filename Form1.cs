@@ -24,12 +24,25 @@ namespace SimpleWebBrowser
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Thsi program was made by Libo Chen");
+            MessageBox.Show("This program was made by Libo Chen");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            NavigateToPage();
+        }
+
+        private void NavigateToPage()
+        {
             webBrowser1.Navigate(textBox1.Text);
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar==(char)ConsoleKey.Enter)
+            {
+                button1_Click(null, null);
+            }
         }
     }
 }
